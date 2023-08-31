@@ -12,10 +12,10 @@ function Navbar() {
     }
     return(
         <>
-            <nav className="w-full flex md:justify-normal justify-between items-center h-24 bg-black text-white px-6 md:px-[5rem]">
+            <nav className="w-full flex md:justify-normal justify-between items-center h-24 bg-black text-white px-6 md:px-[6rem]">
                 <div className='flex items-center'>
                     <GiCartwheel size={30} />
-                    <p className='font-bold font-roboto px-1 text-sm md:text-xl md:px-2'>MORNRIDE</p>
+                    <p className='hidden md:block font-bold font-roboto px-1 text-sm md:text-xl md:px-2'>MORNRIDE</p>
                 </div>
                 <ul className='hidden items-center px-5 font-semibold md:flex'>
                     <li className='flex items-center px-3'>Categories<IoIosArrowForward className='ml-2 mt-1 hover:rotate-90 duration-200 ease-linear' /></li>
@@ -23,10 +23,10 @@ function Navbar() {
                     <li className='px-3'>What's new</li>
                     <li className='px-3'>Delivery</li>
                 </ul>
-                <form className='flex items-center'>
-                <input type="email" className="w-50 -ml-4 md:ml-4 md:w-80 py-2 pl-2 pr-6 rounded-xl text-sm md:text-base outline-0 bg-[#1E1D22]" placeholder='Search product...' />
+                <div className='flex items-center'>
+                <input type="email" className="w-40 -ml-4 md:ml-4 md:w-80 py-2 pl-2 md:pr-6 rounded-xl text-sm md:text-base outline-0 bg-[#1E1D22]" placeholder='Search product...' />
                 <FiSearch className='font-bold -ml-6 md:-ml-7 cursor-pointer' />
-                </form>
+                </div>
                 <AiOutlineShoppingCart className='md:ml-[4rem]' />
                 <div onClick={handleToggle} className="md:hidden cursor-pointer">
                     {toggle ? <AiOutlineClose /> : < AiOutlineMenu />}

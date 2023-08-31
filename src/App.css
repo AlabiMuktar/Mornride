@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+.App {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
